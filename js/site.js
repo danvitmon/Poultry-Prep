@@ -289,7 +289,7 @@ function addMeal() {
       Swal.fire({
         icon: "error",
         title: "Oops!",
-        text: "Please enter valid inputs.",
+        text: "Please enter valid data.",
         heightAuto: false,
       });
     } else {
@@ -315,7 +315,7 @@ function addMeal() {
     Swal.fire({
       icon: "error",
       title: "Oops!",
-      text: "Please enter valid inputs.",
+      text: "Please enter valid data.",
       heightAuto: false,
     });
   }
@@ -388,7 +388,7 @@ function updateMeal() {
       Swal.fire({
         icon: "error",
         title: "Oops!",
-        text: "Please enter valid inputs.",
+        text: "Please enter valid data.",
         heightAuto: false,
       });
     } else {
@@ -419,7 +419,7 @@ function updateMeal() {
     Swal.fire({
       icon: "error",
       title: "Oops!",
-      text: "Please enter valid inputs.",
+      text: "Please enter valid data.",
       heightAuto: false,
     });
   }

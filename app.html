@@ -70,11 +70,11 @@
               <a class="nav-link active" href="/app.html">Poultry Prep</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="/code.html">The Code</a>
+              <a class="nav-link" aria-current="page" href="/code.html">Backend</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="https://github.com/danvitmon/To-Don-t"
-                >The Repo</a
+                >Repository</a
               >
             </li>
             <li class="nav-item">
@@ -85,7 +85,7 @@
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Blog</a>
+              <a class="nav-link" href="https://bloggedin-4b73ab94fb79.herokuapp.com/">My Blog</a>
               <!-- CHANGE THI -->
             </li>
           </ul>
@@ -95,7 +95,7 @@
   </header>
 
     <!-- Main Content -->
-    <main class="container-xxl mainMargins align-items-center">
+    <main class="container-xxl mainMargins align-items-center py-4">
       <div class="row">
         <!-- Content -->
         <div class="col-12">
@@ -108,18 +108,9 @@
               ></h1>
             </div>
             <div
-              class="col-12 col-sm-6 d-flex flex-row justify-content-center justify-content-sm-end gap-2"
+              class="col-12 col-sm-6 d-flex flex-row justify-content-center justify-content-sm-end gap-2 py-2"
               id="btnCol"
             >
-              <button
-                class="btn btn-primary"
-                type="button"
-                data-bs-toggle="modal"
-                data-bs-target="#addDataModal"
-                id="addDataButton"
-              >
-                Add
-              </button>
               <div data-bs-theme="dark">
                 <button
                   class="btn btn-primary dropdown-toggle h-100"
@@ -223,21 +214,15 @@
           <!-- Time Span Title-->
           <div class="row mt-2">
             <div
-              class="col-12 col-sm-6 mb-2 d-flex justify-content-between align-items-center justify-content-sm-start"
+              class="col-12 col-sm-6 mb-0 d-flex justify-content-between align-items-center justify-content-sm-start"
             >
-              Table Displaying:&nbsp;&nbsp;
-              <span id="tableTrackingText"></span>
-            </div>
-            <div
-              class="col-12 col-sm-6 mb-2 d-flex justify-content-between align-items-center justify-content-sm-end"
-            >
-              Cards Displaying:&nbsp;&nbsp;
+              Displaying:&nbsp;&nbsp;
               <span id="cardTrackingText"></span>
             </div>
           </div>
           <!-- Tracker Cards -->
           <div class="row row-cols-2 row-cols-md-4 mb-3">
-            <div class="col-6 col-sm-3 pe-1 py-1">
+            <div class="col-6 col-sm-3 ps-1 py-4">
               <div class="card h-100 p-2 p-lg-4 calorieCard">
                 <div class="row h-100 g-0">
                   <div
@@ -263,7 +248,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-6 col-sm-3 ps-1 py-1 p-sm-1">
+            <div class="col-6 col-sm-3 ps-1 py-4">
               <div class="card h-100 p-2 p-lg-4 proteinCard">
                 <div class="row h-100 g-0">
                   <div
@@ -288,7 +273,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-6 col-sm-3 pe-1 py-1 p-sm-1">
+            <div class="col-6 col-sm-3 ps-1 py-4">
               <div class="card h-100 p-2 p-lg-4 fiberCard">
                 <div class="row h-100 g-0">
                   <div
@@ -311,7 +296,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-6 col-sm-3 ps-1 py-1">
+            <div class="col-6 col-sm-3 ps-1 py-4">
               <div class="card h-100 p-2 p-lg-4 waterCard">
                 <div class="row h-100 g-0">
                   <div
@@ -337,11 +322,33 @@
             </div>
           </div>
           <!-- Meals Table -->
-          <div class="col-12">
+          <div class="row mt-2">
+            <div
+              class="col-5 mb-3 d-flex justify-content-between align-items-center justify-content-sm-start"
+            >
+              Displaying:&nbsp;&nbsp;
+              <span id="tableTrackingText"></span>
+            </div>
+            <button
+              class="btn btn-primary col-2 mb-3 text-center d-flex justify-content-between align-items-center justify-content-sm-center"
+              type="button"
+              data-bs-toggle="modal"
+              data-bs-target="#addDataModal"
+              id="addDataButton"
+            >
+              Add a meal
+            </button>
+            <div
+              class="col-5 mb-2 d-flex justify-content-between align-items-center justify-content-sm-end"
+            >
+              Click a meal to edit it
+            </div>
+          </div>
+          <div class="col-12 py-4">
             <div class="table-responsive border border-2 rounded-3">
               <table class="table table-striped table-hover mb-0 table-dark">
-                <thead class="table-dark" id="mealTableHeader"></thead>
-                <tbody id="mealTable"></tbody>
+                <thead class="table-light text-end" id="mealTableHeader"></thead>
+                <tbody id="mealTable" class="text-end"></tbody>
               </table>
             </div>
           </div>
@@ -508,7 +515,7 @@
                 <div class="col-12">
                   <div class="row">
                     <div class="col-sm-2">
-                      <label class="col-form-label text-light">Calories</label>
+                      <label class="col-form-label text-light">Calories (kCal)</label>
                     </div>
                     <div class="col-sm-10">
                       <input
@@ -523,7 +530,7 @@
                 <div class="col-12">
                   <div class="row">
                     <div class="col-sm-2">
-                      <label class="col-form-label text-light">Protein</label>
+                      <label class="col-form-label text-light">Protein (g)</label>
                     </div>
                     <div class="col-sm-10">
                       <input
@@ -538,7 +545,7 @@
                 <div class="col-12">
                   <div class="row">
                     <div class="col-sm-2">
-                      <label class="col-form-label text-light">Fiber</label>
+                      <label class="col-form-label text-light">Fiber (g)</label>
                     </div>
                     <div class="col-sm-10">
                       <input
@@ -553,7 +560,7 @@
                 <div class="col-12">
                   <div class="row">
                     <div class="col-sm-2">
-                      <label class="col-form-label text-light">Water</label>
+                      <label class="col-form-label text-light">Water (L)</label>
                     </div>
                     <div class="col-sm-10">
                       <input
@@ -574,7 +581,7 @@
               class="btn btn-secondary"
               data-bs-dismiss="modal"
             >
-              Close
+              Cancel
             </button>
             <button
               type="button"
@@ -664,7 +671,7 @@
                 <div class="col-12">
                   <div class="row">
                     <div class="col-sm-2">
-                      <label class="col-form-label text-light">Calories</label>
+                      <label class="col-form-label text-light">Calories (kCal)</label>
                     </div>
                     <div class="col-sm-10">
                       <input
@@ -679,7 +686,7 @@
                 <div class="col-12">
                   <div class="row">
                     <div class="col-sm-2">
-                      <label class="col-form-label text-light">Protein</label>
+                      <label class="col-form-label text-light">Protein (g)</label>
                     </div>
                     <div class="col-sm-10">
                       <input
@@ -694,7 +701,7 @@
                 <div class="col-12">
                   <div class="row">
                     <div class="col-sm-2">
-                      <label class="col-form-label text-light">Fiber</label>
+                      <label class="col-form-label text-light">Fiber (g)</label>
                     </div>
                     <div class="col-sm-10">
                       <input
@@ -709,7 +716,7 @@
                 <div class="col-12">
                   <div class="row">
                     <div class="col-sm-2">
-                      <label class="col-form-label text-light">Water</label>
+                      <label class="col-form-label text-light">Water (L)</label>
                     </div>
                     <div class="col-sm-10">
                       <input
@@ -730,7 +737,7 @@
               class="btn btn-secondary"
               data-bs-dismiss="modal"
             >
-              Close
+              Cancel
             </button>
             <button
               type="button"
