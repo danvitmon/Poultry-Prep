@@ -1,11 +1,11 @@
 # Poultry Prep - Meal Tracking
 Poultry Prep is a seamless macro tracking app designed to make your life easier.
 # Features
-  - Meal Makeup
-  - Calories
-  - Protein
-  - Fiber
-  - Water
+  - CSS and Bootstrap Layout
+  - JavaScript Fundamentals
+  - JavaScript Loops
+  - JavaScript DOM Manipulation
+  - Boolean Logic
 
 # Opportunities
 - Printing functionality
